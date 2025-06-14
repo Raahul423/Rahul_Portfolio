@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
-import { Document,Page,pdfjs } from 'react-pdf';
-
+import { Document, Page,} from '@react-pdf/renderer';
+import mypdf from './Assests/rahul_Portfolio.pdf';
 
 import profile from './Assests/rahul-profile.jpg';
 import arrow from './Assests/arrow.png';
-import pdf2 from './Assests/rahul_Portfolio.pdf'
 import checkmark from './Assests/checkmark.png';
-import education from './Assests/education.png';
-import mail from './Assests/email.png';
-import experience from './Assests/experience.png';
-import github from './Assests/github.png';
-import images from './Assests/IMG_20240830_213334.jpg';
-import linkedin from './Assests/linkedin.png';
-import project1 from './Assests/youtube.jpg';
-import projectone from './Assests/youtube_home.gif';
-import project2 from './Assests/netflix.jpg';
-import projecttwo from './Assests/netflix_animation.gif';
+import education from './Assests/education.png'
+import experience from './Assests/experience.png'
+import github from './Assests/github.png'
+import images from './Assests/IMG_20240830_213334.jpg'
+import linkedin from './Assests/linkedin.png'
+import project1 from './Assests/youtube.jpg'
+import projectone from './Assests/youtube_home.gif'
+import project2 from './Assests/netflix.jpg'
+import projecttwo from './Assests/netflix_animation.gif'
 
-import project3 from './Assests/project-3.png';
+// import project3 from './Assests/project-3.png'
+import mail from './Assests/email.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -54,7 +53,7 @@ function App() {
   };
 
   function navbar() {
-    console.log("hii");
+    // console.log("hii");
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".responsive-icon");
     const cross = document.querySelector(".cross");
@@ -111,10 +110,10 @@ function App() {
           </div>
 
           <div className="menu-links">
-            <li><a href="#about" onclick={toggleMenu}>About</a></li>
-            <li><a href="#experience" onclick={toggleMenu}>Experience</a></li>
-            <li><a href="#projects" onclick={toggleMenu}>Projects</a></li>
-            <li><a href="#contact" onclick={toggleMenu}>Contact Us</a></li>
+            <li><a href="#about" onClick={toggleMenu}>About</a></li>
+            <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
+            <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
+            <li><a href="#contact" onClick={toggleMenu}>Contact Us</a></li>
           </div>
         </div>
       </nav>
@@ -134,7 +133,7 @@ function App() {
 
 
           <div className="btn-container">
-            <button className="btn btn-color-2" onClick={() => window.open(pdf2)}> Download CV
+            <button className="btn btn-color-2" onClick={() => window.open(mypdf)}> Download CV
             </button>
             <button className="btn btn-color-1" onClick={Contact}>
               Contact Info
@@ -184,7 +183,7 @@ function App() {
             </div>
           </div>
         </div>
-        <img src={arrow} alt="Arrow icon" className="icon arrow" onclick="location.href='./#experience'" />
+        <img src={arrow} alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='./#experience'} />
       </section>
 
       <section id="experience">
@@ -268,7 +267,7 @@ function App() {
             </div>
           </div>
         </div>
-        <img src={arrow} alt="Arrow icon" className="icon arrow" onclick="location.href='./#projects'" />
+        <img src={arrow} alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='./#projects'} />
       </section>
 
 
@@ -288,10 +287,10 @@ function App() {
                 <a href="/" alt="Mythrill" target="_blank">
                   <div className="card">
                     <div className="wrapper">
-                      <img src={project1} className="cover-image" />
+                      <img src={project1} alt='Error' className="cover-image" />
                     </div>
 
-                    <img src={projectone} className="character" />
+                    <img src={projectone} alt='Error' className="character" />
                   </div>
                 </a>
 
@@ -302,7 +301,7 @@ function App() {
                 <button className="btn btn-color-2 project-btn" onClick={ytclone}>
                   Github
                 </button>
-                <button className="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                <button className="btn btn-color-2 project-btn" onClick={() => window.location.href='https://github.com/'}>
                   Live Demo
                 </button>
               </div>
@@ -315,10 +314,10 @@ function App() {
                 <a href="/" alt="Mythrill" target="_blank">
                   <div className="card">
                     <div className="wrapper">
-                      <img src={project2} className="cover-image" />
+                      <img src={project2} alt='Error' className="cover-image" />
                     </div>
 
-                    <img src={projecttwo} className="character" />
+                    <img src={projecttwo} alt='Error' className="character" />
                   </div>
                 </a>
 
@@ -345,10 +344,10 @@ function App() {
 
               <div className="card">
                   <div className="wrapper">
-                    <img src={project2} className="cover-image" />
+                    <img src={project2} alt='Error' className="cover-image" />
                   </div>
 
-                  <img src={projectone} className="character" />
+                  <img src={projectone} alt='Error' className="character" />
                 </div>
               </a>
                 
@@ -357,17 +356,17 @@ function App() {
               </div>
               <h2 className="experience-sub-title project-title">Project Three</h2>
               <div className="btn-container">
-                <button className="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                <button className="btn btn-color-2 project-btn" onClick={() => window.location.href='https://github.com/'}>
                   Github
                 </button>
-                <button className="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                <button className="btn btn-color-2 project-btn" onClick={() => window.location.href='https://github.com/'}>
                   Live Demo
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <img src={arrow} alt="Arrow icon" className="icon arrow" onclick="location.href='./#contact'" />
+        <img src={arrow} alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='./#contact'} />
       </section>
 
 {/* ---------contact section-------- */}
