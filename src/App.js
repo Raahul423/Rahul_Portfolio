@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Document, Page,} from '@react-pdf/renderer';
+import { Document, Page,} from 'react-pdf'
 import mypdf from './Assests/rahul_Portfolio.pdf';
 
 import profile from './Assests/rahul-profile.jpg';
