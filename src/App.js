@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Document,Page,pdfjs } from 'react-pdf';
 
-import pdf from './Assests/Rahul.pdf';
+
 import profile from './Assests/rahul-profile.jpg';
 import arrow from './Assests/arrow.png';
+import pdf2 from './Assests/rahul_Portfolio.pdf'
 import checkmark from './Assests/checkmark.png';
 import education from './Assests/education.png';
 import mail from './Assests/email.png';
@@ -28,7 +30,19 @@ function App() {
 
   let Github = () => {
     window.location.href = 'https://github.com/Raahul423'
+
   }
+  let ytclone=()=>{
+    window.location.href='https://github.com/Raahul423/YouTube-Clone'
+  }
+  let netflixclone=()=>{
+    window.location.href='https://github.com/Raahul423/Netflix-clone'
+  }
+  let netflixclonelive=()=>{
+    window.location.href='https://net-flix-clone423.netlify.app/'
+  }
+
+
   let Contact = () => {
     window.location.href = './#contact'
   }
@@ -120,7 +134,7 @@ function App() {
 
 
           <div className="btn-container">
-            <button className="btn btn-color-2" onClick={() => window.open(pdf)}> Download CV
+            <button className="btn btn-color-2" onClick={() => window.open(pdf2)}> Download CV
             </button>
             <button className="btn btn-color-1" onClick={Contact}>
               Contact Info
@@ -285,7 +299,7 @@ function App() {
               </div>
               <h2 className="experience-sub-title project-title">YouTube Clone</h2>
               <div className="btn-container">
-                <button className="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                <button className="btn btn-color-2 project-btn" onClick={ytclone}>
                   Github
                 </button>
                 <button className="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
@@ -311,10 +325,10 @@ function App() {
               </div>
               <h2 className="experience-sub-title project-title">Netflix Clone</h2>
               <div className="btn-container">
-                <button className="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                <button className="btn btn-color-2 project-btn" onClick={netflixclone}>
                   Github
                 </button>
-                <button className="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                <button className="btn btn-color-2 project-btn" onClick={netflixclonelive}>
                   Live Demo
                 </button>
               </div>
@@ -326,13 +340,18 @@ function App() {
             <div className="details-container color-container">
               <div className="article-container">
 
-                <div className="card">
+
+              <a href="/" alt="Mythrill" target="_blank">
+
+              <div className="card">
                   <div className="wrapper">
                     <img src={project2} className="cover-image" />
                   </div>
 
                   <img src={projectone} className="character" />
                 </div>
+              </a>
+                
 
 
               </div>

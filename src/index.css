@@ -82,7 +82,7 @@ a {
   text-decoration-color: white;
   position: relative;
 }
-/* a:after{
+a:after{
   content: '';
   position: absolute;
   left: 0;
@@ -91,7 +91,7 @@ a {
   width: 0;
   background-color: #fa7516;
   transition: width .3s;
-} */
+}
 a:hover{
   color: #fa7516;
 }
